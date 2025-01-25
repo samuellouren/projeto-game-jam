@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fe3cc39ae4f605441832e74a600a359c
+guid: d25b16a2f74b038448e5a36b93017945
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6456685049216675674
-    second: planty submers_0
+      213: -5549087223996599485
+    second: parede a esquerda_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: planty submers_0
+      name: parede a esquerda_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 41
         y: 0
-        width: 256
-        height: 256
-      alignment: 9
-      pivot: {x: 0.4978425, y: 0.49784243}
+        width: 19
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a05dde182f3566a0800000000000000
-      internalID: -6456685049216675674
+      spriteID: 3433602f19eadf2b0800000000000000
+      internalID: -5549087223996599485
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f8cb118ac714de94ca751b052ace66e3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      planty submers_0: -6456685049216675674
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
