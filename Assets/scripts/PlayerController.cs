@@ -33,10 +33,51 @@ public class PlayerController : MonoBehaviour
         }
 
         playerAnimator.SetBool("isWalking", isWalking);
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (CheckBubble())
+            {
+                TransformHuman();
+            }
+            else
+            {
+                TransformBubble();
+            }
+        }
 
         
     }
-
+    private bool isBubble;
+    public GameObject Human;
+    public GameObject Bubble;
+    private bool CheckBubble()
+    {
+        Debug.Log(isBubble);
+        return isBubble;
+    }
+    private void TransformHuman()
+    {
+        isBubble = false;
+        Human.SetActive(true);
+        playerAnimator = Human.GetComponent<Animator>();
+        Bubble.SetActive(false);
+        foreach (var item in FindObjectsByType<DoorController>(FindObjectsSortMode.None))
+        {
+            item.CloseDoor();
+        }
+    }
+    private void TransformBubble()
+    {
+        isBubble = true;
+        playerAnimator = Bubble.GetComponent<Animator>(); 
+        Bubble.SetActive(true);
+        Human.SetActive(false);
+        foreach (var item in FindObjectsByType<DoorController>(FindObjectsSortMode.None))
+        {
+            item.OpenDoor();
+        }
+    }
     private void FixedUpdate()
     {
         rb2D.MovePosition(rb2D.position +  movement * speed * Time.fixedDeltaTime);
