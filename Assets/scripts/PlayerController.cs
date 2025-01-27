@@ -82,5 +82,11 @@ public class PlayerController : MonoBehaviour
     {
         rb2D.MovePosition(rb2D.position +  movement * speed * Time.fixedDeltaTime);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("ALAVANCA")){
+            collision.gameObject.GetComponent<AlavancaController>().Activate();
+        }
+    }
 }
   
